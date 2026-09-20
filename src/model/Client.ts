@@ -15,4 +15,8 @@ export default class Client extends Person {
     public setDocumentNumber(documentNumber: string): void {
         this.documentNumber = documentNumber;
     }
+
+    public getIdentifier(): string {
+        return this.documentNumber;
+    }
 }

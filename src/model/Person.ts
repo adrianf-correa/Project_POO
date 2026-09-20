@@ -1,4 +1,5 @@
-export default class Person {
+import Identifiable from "../interfaces/Identifiable";
+export default abstract class Person implements Identifiable {
     private name: string;
     private phoneNumber: string;
 
@@ -22,4 +23,6 @@ export default class Person {
     public setPhoneNumber(phoneNumber: string): void {
         this.phoneNumber = phoneNumber;
     }
+
+    public abstract getIdentifier(): string;
 }

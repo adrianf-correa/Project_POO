@@ -15,4 +15,8 @@ export default class Attendant extends Person {
     public setEmployeeCode(employeeCode: string): void {
         this.employeeCode = employeeCode;
     }
+
+    public getIdentifier(): string {
+        return this.employeeCode;
+    }
 }

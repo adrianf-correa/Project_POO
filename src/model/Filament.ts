@@ -1,11 +1,13 @@
+import { FilamentType } from "../enum/FilamentType";
+
 export default class Filament {
     private brand: string;
     private color: string;
-    private type: string;
+    private type: FilamentType;
     private price: number;
     private weight: number;
 
-    constructor(brand: string, color: string, type: string, price: number, weight: number) {
+    constructor(brand: string, color: string, type: FilamentType, price: number, weight: number) {
         this.brand = brand;
         this.color = color;
         this.type = type;
@@ -29,11 +31,11 @@ export default class Filament {
         this.color = color;
     }
 
-    public getType(): string {
+    public getType(): FilamentType {
         return this.type;
     }
 
-    public setType(type: string): void {
+    public setType(type: FilamentType): void {
         this.type = type;
     }
 
