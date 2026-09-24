@@ -1,5 +1,6 @@
 import Filament from "./Filament";
 import Printer from "./Printer";
+import IProduct from "../interfaces/IProduct";
 
 export default class Product {
     private name: string;

@@ -1,6 +1,7 @@
 import Attendant from "./Attendant";
 import Client from "./Client";
 import Product from "./Product";
+import ISale from "../interfaces/ISale";
 
 export default class Sale {
     private client: Client;
