@@ -17,7 +17,7 @@ class MainScreen {
             console.log("1 - Register client");
             console.log("2 - List clients");
             console.log("0 - Exit");
-            option = this.prompt("Choose an option: ").trim();
+            option = this.prompt("Choose an option: ");
             switch (option) {
                 case "1":
                     this.openClientRegistrationScreen();
@@ -26,7 +26,7 @@ class MainScreen {
                     this.openClientListScreen();
                     break;
                 case "0":
-                    console.log("Goodbye!");
+                    console.log("bye bye!");
                     break;
                 default:
                     console.log("Invalid option. Choose 1, 2 or 0.");
@@ -38,7 +38,7 @@ class MainScreen {
         console.log("\n1 - Individual client");
         console.log("2 - Corporate client");
         console.log("0 - Cancel");
-        const option = this.prompt("Choose the client type: ").trim();
+        const option = this.prompt("Choose the client type: ");
         switch (option) {
             case "1":
                 this.registerIndividualClientScreen();
@@ -80,10 +80,10 @@ class MainScreen {
         }
     }
     readRequiredInput(message) {
-        let value = this.prompt(message).trim();
+        let value = this.prompt(message);
         while (value === "") {
-            console.log("This field is required.");
-            value = this.prompt(message).trim();
+            console.log("This field is empty.");
+            value = this.prompt(message);
         }
         return value;
     }

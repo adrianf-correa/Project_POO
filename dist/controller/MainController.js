@@ -13,11 +13,11 @@ class MainController {
         new MainScreen_1.default(this);
     }
     registerIndividualClient(name, phoneNumber, cpf) {
-        const client = new IndividualClient_1.default(name, phoneNumber, cpf);
+        let client = new IndividualClient_1.default(name, phoneNumber, cpf);
         this.database.clients.push(client);
     }
     registerCorporateClient(name, phoneNumber, cnpj, corporateName) {
-        const client = new CorporateClient_1.default(name, phoneNumber, cnpj, corporateName);
+        let client = new CorporateClient_1.default(name, phoneNumber, cnpj, corporateName);
         this.database.clients.push(client);
     }
     getClientIdentifiers() {

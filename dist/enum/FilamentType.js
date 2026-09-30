@@ -7,4 +7,4 @@ var FilamentType;
     FilamentType["ABS"] = "ABS";
     FilamentType["PETG"] = "PETG";
     FilamentType["TPU"] = "TPU";
-})(FilamentType || (exports.FilamentType = FilamentType = {}));
+})(FilamentType = exports.FilamentType || (exports.FilamentType = {}));

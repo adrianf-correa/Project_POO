@@ -11,17 +11,12 @@ export default class MainController {
     }
 
     public registerIndividualClient(name: string, phoneNumber: string, cpf: string): void {
-        const client = new IndividualClient(name, phoneNumber, cpf);
+        let client = new IndividualClient(name, phoneNumber, cpf);
         this.database.clients.push(client);
     }
 
-    public registerCorporateClient(
-        name: string,
-        phoneNumber: string,
-        cnpj: string,
-        corporateName: string
-    ): void {
-        const client = new CorporateClient(name, phoneNumber, cnpj, corporateName);
+    public registerCorporateClient(name: string, phoneNumber: string, cnpj: string, corporateName: string): void {
+        let client = new CorporateClient(name, phoneNumber, cnpj, corporateName);
         this.database.clients.push(client);
     }
 
