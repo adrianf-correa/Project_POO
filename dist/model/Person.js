@@ -17,5 +17,8 @@ class Person {
     setPhoneNumber(phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+    getDescription() {
+        return "Name: " + this.name + " | Phone: " + this.phoneNumber;
+    }
 }
 exports.default = Person;

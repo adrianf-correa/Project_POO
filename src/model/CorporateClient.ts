@@ -29,4 +29,8 @@ export default class CorporateClient extends Client {
     public setCorporateName(corporateName: string): void {
         this.corporateName = corporateName;
     }
+
+    public getDescription(): string {
+        return super.getDescription() + " | cnpj: " + this.cnpj + " | " + "corporateName: " + this.corporateName;
+    }    
 }

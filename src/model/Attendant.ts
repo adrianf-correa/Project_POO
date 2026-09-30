@@ -1,22 +1,22 @@
 import Person from "./Person";
 
 export default class Attendant extends Person {
-    private employeeCode: string;
+    private employeeID: string;
 
-    constructor(name: string, phoneNumber: string, employeeCode: string) {
+    constructor(name: string, phoneNumber: string, employeeID: string) {
         super(name, phoneNumber);
-        this.employeeCode = employeeCode;
+        this.employeeID = employeeID;
     }
 
-    public getEmployeeCode(): string {
-        return this.employeeCode;
+    public getEmployeeID(): string {
+        return this.employeeID;
     }
 
-    public setEmployeeCode(employeeCode: string): void {
-        this.employeeCode = employeeCode;
+    public setEmployeeID(employeeID: string): void {
+        this.employeeID = employeeID;
     }
 
     public getIdentifier(): string {
-        return this.employeeCode;
+        return this.employeeID;
     }
 }

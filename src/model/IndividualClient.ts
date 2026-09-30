@@ -12,4 +12,8 @@ export default class IndividualClient extends Client {
     public getIdentifier(): string {
         return this.cpf;
     }
+
+    public getDescription(): string {
+        return super.getDescription() + " | cpf: " + this.cpf;
+    }    
 }
