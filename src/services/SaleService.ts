@@ -1,10 +1,11 @@
-import Product from "../model/Product";
+import IProduct from "../interfaces/IProduct";
 
 export default class SaleService{
-    public sale(product: Product) {
+    public sale(product: IProduct): number {
         if (product) {
-            product.calculateProductCost();
-            console.log(`Product cost: ${product.calculateProductCost()}`)
+            let cost = product.calculateProductCost();
+            return cost;
         }
+        return 0;
     }     
 }

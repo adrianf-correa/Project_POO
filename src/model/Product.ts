@@ -8,7 +8,6 @@ export default class Product implements IProduct{
         public name: string,
         public filament: Filament,
         public filamentAmount: number,
-        public salePrice: number
     ) {}
 
     public calculateProductCost(filamentAmount?: number): number {
@@ -18,5 +17,12 @@ export default class Product implements IProduct{
             amount = this.filamentAmount;
         }
         return costPerGram * amount;
+    }
+    public calculateSalePrice(proftiMargin?: number): number {
+        let cost = this.calculateProductCost();
+        if (proftiMargin === undefined){
+            proftiMargin = 100
+        }
+        return cost * (1 + proftiMargin / 100)
     }
 }

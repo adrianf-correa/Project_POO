@@ -12,10 +12,12 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/node": "^22.20.2",
     "@types/prompt-sync": "^4.2.3",
     "jest": "^30.5.2",
-    "typescript": "^7.0.2"
+    "ts-jest": "^29.4.15",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "prompt-sync": "^4.2.0"
